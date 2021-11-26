@@ -10,9 +10,12 @@ import { useGetResults } from '../hooks/useSearch';
 import { useAdd, useDetail } from '../hooks/useAction';
 import { useReduce } from '../hooks/useReduce';
 import { useRemoveAuthenticated } from '../hooks/useAut';
+import {useState} from 'react';
+import Loader from '../components/Loader';
 
 const Home = () => {
-    const [results, handleSearch] = useGetResults();
+    const [loading, setLoading] = useState(false);
+    const [results, handleSearch] = useGetResults(setLoading);
     const [addHero, team, setTeam] = useAdd();
     const [detail] = useDetail();
     const [totalAverage, otherDetails] = useReduce(team);
@@ -22,6 +25,7 @@ const Home = () => {
         <Container fluid>
             <Header><Button title='Logout' action={removeToken} /> </Header> 
             <Search handleSearch={handleSearch} />
+            {loading && <Loader /> }
             <ModalHeroes heroes={results} addHero={addHero} detail={detail} />               
             <Row>
                 <Col lg={7}>
