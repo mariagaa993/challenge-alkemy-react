@@ -1,25 +1,17 @@
 import { Redirect, Route } from 'react-router-dom';
 import { useAuthenticated } from '../hooks/useAut';
 
-export default function PrivateRoute({ children, ...rest }) {
-    
-    let auth = useAuthenticated();
-  
+const PrivateRoute = ({children, ...rest}) => {
+    const auth = useAuthenticated();
+
     return (
-      <Route
-        {...rest}
-        render={({ location }) =>
-          auth ? (
-            children
-          ) : (
-            <Redirect
-              to={{
-                pathname: "/login",
-                state: { from: location }
-              }}
-            />
-          )
-        }
-      />
-    );
-  }
+        <Route {...rest} render={({ location }) => auth ? (children) : 
+            <>
+            {alert('Without permission! You must enter first.')}
+            <Redirect to={{pathname: "/login", state: {from: location}}} /></>
+             }
+        />
+    )
+}
+
+export default PrivateRoute;
