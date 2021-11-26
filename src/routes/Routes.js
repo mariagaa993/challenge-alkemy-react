@@ -4,6 +4,7 @@ import Login from '../pages/Login';
 import Home from '../pages/Home';
 import Detail from '../pages/Detail';
 import PrivateRoute from './Private';
+import Error404 from '../pages/Error404';
 
 const Routes = () => {
 
@@ -15,6 +16,7 @@ const Routes = () => {
 				<Home />
 			</PrivateRoute>
 			<Route exact path='/:id/info' component={Detail} />
+			<Route path='*' component={Error404} />
 		</Switch>
   	)
 }
