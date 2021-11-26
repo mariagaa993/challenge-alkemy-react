@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export const useInputValue = (handleSearch) => {
     const [input, setInput] = useState('');
@@ -21,14 +21,19 @@ export const useInputValue = (handleSearch) => {
     return [input, handleChange, handleSubmit];
 }
 
-export const useGetResults = () => {
+export const useGetResults = (setLoading) => {
     const [results, setResults] = useState([]);
 
     const handleSearch = input => {
+        setLoading(true)
         fetch(`https://www.superheroapi.com/api.php/670221417697610/search/${input}`)
         .then(res => res.json())
         .then(data => data.results !== undefined ? setResults(data.results) : alert('No existe!'));
     }
+
+    useEffect(() => {
+        setLoading(false)
+    }, [results, setLoading])
 
     return [results, handleSearch];
 }
