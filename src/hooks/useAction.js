@@ -46,7 +46,7 @@ export const useDetail = () => {
 
     const detail = (hero) => {
         localStorage.setItem('hero', JSON.stringify(hero))
-        history.push(`${hero.id}/info`)
+        history.push(`hero/${hero.id}/info`)
     }
 
     return [detail];

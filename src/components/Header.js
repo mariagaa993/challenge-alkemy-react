@@ -3,8 +3,8 @@ import { Container } from 'react-bootstrap';
 const Header = ({children}) => {
     
     return (
-        <Container fluid>
-            <h1>Superheros</h1>
+        <Container fluid className='header'>
+            <h1>SuperHeros App!</h1>
             {children}
         </Container>
     ) 

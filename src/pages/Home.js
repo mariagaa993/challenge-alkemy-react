@@ -22,21 +22,26 @@ const Home = () => {
     const [removeToken] = useRemoveAuthenticated();
 
     return (
-        <Container fluid>
-            <Header><Button title='Logout' action={removeToken} /> </Header> 
-            <Search handleSearch={handleSearch} />
-            {loading && <Loader /> }
-            <ModalHeroes heroes={results} addHero={addHero} detail={detail} />               
-            <Row>
-                <Col lg={7}>
-                    <Team heroes={team} setTeam={setTeam} detail={detail} />
-                </Col>
-                <Col lg={5}>
-                    <Powerstats heroes={team} average={totalAverage} otherDetails={otherDetails} />
-                </Col>
-            </Row>
-            <Footer /> 
-        </Container>
+        <>
+            <Header>
+                <Button className='header-button' title='Logout' action={removeToken} />
+            </Header> 
+            <Container fluid className='container-home'>
+                <Search handleSearch={handleSearch} />
+                { loading && <Loader /> }
+                <ModalHeroes heroes={results} addHero={addHero} detail={detail} />               
+                <Row>
+                    <Col lg={7}>
+                        <Team heroes={team} setTeam={setTeam} detail={detail} />
+                    </Col>
+                    <Col lg={5}>
+                        { team.length > 0 && 
+                            <Powerstats heroes={team} average={totalAverage} otherDetails={otherDetails} /> }
+                    </Col>
+                </Row> 
+            </Container>
+            <Footer />
+        </>
     )
 }
 

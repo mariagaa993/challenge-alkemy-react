@@ -7,7 +7,7 @@ const PrivateRoute = ({children, ...rest}) => {
     return (
         <Route {...rest} render={({ location }) => auth ? (children) : 
             <>
-            {alert('Without permission! You must enter first.')}
+            {alert('Without permission! You must log in first.')}
             <Redirect to={{pathname: "/login", state: {from: location}}} /></>
              }
         />

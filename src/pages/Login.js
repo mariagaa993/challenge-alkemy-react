@@ -5,11 +5,13 @@ import Footer from '../components/Footer';
 
 const Login = () => {
     return (
-        <Container fluid>
+        <>
             <Header />
-            <LoginComponent />
+            <Container fluid className='container-login'>
+                <LoginComponent />    
+            </Container>
             <Footer />
-        </Container>
+        </>
     )
 }
 

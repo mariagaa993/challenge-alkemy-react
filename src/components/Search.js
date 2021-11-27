@@ -15,7 +15,7 @@ const Search = ({handleSearch}) => {
                     onChange={handleChange}
                     value={input}
                 />
-                <Button title='Search' variant="primary" type="submit" />  
+                <Button title='Search' className='search-button' type="submit" />  
             </InputGroup>
         </Form>
     )

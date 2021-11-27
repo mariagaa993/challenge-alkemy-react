@@ -2,8 +2,8 @@ import { Container } from 'react-bootstrap';
 
 const Footer = () => {
     return (
-        <Container fluid style={{backgroundColor: 'red'}}>
-            <p>©2021 Made by: María Alarcón</p>
+        <Container fluid className='footer'>
+            <p className='footer-p'>&copy;2021 - Made by: María Gabriela Alarcón</p>
         </Container>
     )
 }

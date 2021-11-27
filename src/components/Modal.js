@@ -16,15 +16,15 @@ const ModalHeroes = ({heroes, addHero, detail}) => {
                 <Modal.Title id="example-modal-sizes-title-lg">Who do you want for your team?</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <Container fluid>
+                <Container fluid className='container-modal'>
                     <Row>
                         { heroes.map(hero => {
                             return (
-                                <Col lg={4} key={hero.id}>
+                                <Col md={6} lg={heroes.length <= 1 ? 12 : 4 } xl={heroes.length <= 1 ? 12 : 4 } key={hero.id}>
                                     <FigureComponent className='card-modal' key={hero.id} {...hero}>
                                         <Button 
                                             action={() => detail(hero)} title='Detail' 
-                                            variant="primary" type="submit" />
+                                            className='detail-button' type="submit" />
                                         <Button 
                                             action={() => addHero(hero)} title='Add' 
                                             variant="success" type="submit" /> 

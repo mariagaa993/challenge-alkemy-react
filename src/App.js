@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import './App.scss';
+import './scss/app.scss';
 import Routes from './routes/Routes';
 
 const App = () => {
