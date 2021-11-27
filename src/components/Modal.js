@@ -1,5 +1,5 @@
 import { Modal, Container, Row, Col } from 'react-bootstrap';
-import Card from './Card';
+import FigureComponent from './Figure';
 import Button from './Button';
 import { useModal } from '../hooks/useModal';
 
@@ -8,9 +8,8 @@ const ModalHeroes = ({heroes, addHero, detail}) => {
 
     return (
         <Modal
-            size="lg"
+            size="xl"
             show={show}
-            fullscreen={true}
             onHide={() => setShow(false)}
             aria-labelledby="example-modal-sizes-title-lg">
             <Modal.Header closeButton>
@@ -22,14 +21,14 @@ const ModalHeroes = ({heroes, addHero, detail}) => {
                         { heroes.map(hero => {
                             return (
                                 <Col lg={4} key={hero.id}>
-                                    <Card key={hero.id} {...hero}>
+                                    <FigureComponent className='card-modal' key={hero.id} {...hero}>
                                         <Button 
                                             action={() => detail(hero)} title='Detail' 
                                             variant="primary" type="submit" />
                                         <Button 
                                             action={() => addHero(hero)} title='Add' 
                                             variant="success" type="submit" /> 
-                                    </Card>
+                                    </FigureComponent>
                                 </Col>
                             )}
                         )}

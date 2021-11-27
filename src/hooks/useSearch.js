@@ -28,7 +28,14 @@ export const useGetResults = (setLoading) => {
         setLoading(true)
         fetch(`https://www.superheroapi.com/api.php/670221417697610/search/${input}`)
         .then(res => res.json())
-        .then(data => data.results !== undefined ? setResults(data.results) : alert('No existe!'));
+        .then(data => {
+            if(data.results !== undefined) {
+                setResults(data.results)
+            } else {
+                alert('No existe!');
+                setLoading(false)
+            }
+        })
     }
 
     useEffect(() => {

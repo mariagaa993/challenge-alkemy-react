@@ -64,3 +64,11 @@
     justify-content: space-around;
     margin: 0 50px;
 }
+
+.modal-content {
+    height: 500px;
+}
+
+.modal-body {
+    overflow-y: scroll;
+}
