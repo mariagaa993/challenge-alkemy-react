@@ -14,7 +14,7 @@ export const getToken = (data) => {
             return true;
         })
         .catch(err => {
-            console.error(err)
+            return false;
         })
     );
 }
