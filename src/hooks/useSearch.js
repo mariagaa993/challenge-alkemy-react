@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { getData } from '../services/Data';
 
 export const useInputValue = (handleSearch) => {
