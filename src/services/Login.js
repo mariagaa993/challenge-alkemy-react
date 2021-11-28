@@ -1,5 +1,5 @@
 import axios from 'axios';
-import LOGIN from '../utils/url';
+import LOGIN from '../utils/login';
 
 export const getToken = (data) => {
     return (

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getData } from '../services/Data';
 
 export const useInputValue = (handleSearch) => {
     const [input, setInput] = useState('');
@@ -23,24 +24,22 @@ export const useInputValue = (handleSearch) => {
 
 export const useGetResults = (setLoading) => {
     const [results, setResults] = useState([]);
-
-    const handleSearch = input => {
+   
+    const handleSearch = (input) => {
         setLoading(true)
-        fetch(`https://www.superheroapi.com/api.php/670221417697610/search/${input}`)
-        .then(res => res.json())
-        .then(data => {
-            if(data.results !== undefined) {
-                setResults(data.results)
+        const apiRequest = getData(input);
+        apiRequest.then(data => {
+            if(data !== undefined) {
+                setResults(data)
+                setLoading(false)
             } else {
                 alert('The character does not exist. Find another!');
                 setLoading(false)
             }
+        }).catch(err => {
+            alert(err)
         })
     }
-
-    useEffect(() => {
-        setLoading(false)
-    }, [results, setLoading])
 
     return [results, handleSearch];
 }
