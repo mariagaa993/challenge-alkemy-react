@@ -1,1 +1,1 @@
-# Challege Alkemy (React.js)
+# Challenge Alkemy (React.js)

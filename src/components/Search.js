@@ -8,15 +8,15 @@ const Search = ({handleSearch}) => {
 
     return (
         <Form onSubmit={handleSubmit}>
-            <InputGroup className="mb-3">
+            <InputGroup className='mb-3'>
                 <FormControl
-                    placeholder="Search your hero"
-                    aria-label="Search your hero"
-                    aria-describedby="Search your hero"
+                    placeholder='Search your hero'
+                    aria-label='Search your hero'
+                    aria-describedby='Search your hero'
                     onChange={handleChange}
                     value={input}
                 />
-                <Button title='Search' className='search-button' type="submit" />  
+                <Button title='Search' className='search-button' type='submit' />  
             </InputGroup>
         </Form>
     )

@@ -15,7 +15,7 @@ const CardHero = ({name, image, children, biography, powerstats}) => {
                         <ProgressB key={result[0]} title={result[0]} 
                             value={result[1] === 'null' ? '0' : result[1]} />)}
                 </Container>
-                <Container fluid className="card-button">
+                <Container fluid className='card-button'>
                     {children}        
                 </Container>
             </Card.Body>

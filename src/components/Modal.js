@@ -9,12 +9,12 @@ const ModalHeroes = ({heroes, addHero, detail}) => {
 
     return (
         <Modal
-            size="xl"
+            size='xl'
             show={show}
             onHide={() => setShow(false)}
-            aria-labelledby="example-modal-sizes-title-lg">
+            aria-labelledby='modal-lg'>
             <Modal.Header closeButton>
-                <Modal.Title id="example-modal-sizes-title-lg">Who do you want for your team?</Modal.Title>
+                <Modal.Title id='modal-lg'>Who do you want for your team?</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Container fluid className='container-modal'>
@@ -25,10 +25,10 @@ const ModalHeroes = ({heroes, addHero, detail}) => {
                                     <FigureComponent className='card-modal' key={hero.id} {...hero}>
                                         <Button 
                                             action={() => detail(hero)} title='Detail' 
-                                            className='detail-button' type="submit" />
+                                            className='detail-button' type='submit' />
                                         <Button 
                                             action={() => addHero(hero)} title='Add' 
-                                            variant="success" type="submit" /> 
+                                            variant='success' type='submit' /> 
                                     </FigureComponent>
                                 </Col>
                             )}

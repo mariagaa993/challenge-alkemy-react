@@ -22,9 +22,9 @@ const DetailInfo = ({addHero}) => {
                             value={result[1] === '-' ? 'null' : result[1]} />)}
                     <Container fluid className='button-detail'>
                         <Button className='b-detail' action={() => addHero(selectedHero)} title='Add' 
-                            variant="success" type="submit" /> 
+                            variant='success' type='submit' /> 
                         <Button className='b-detail' action={() => back()} title='Back' 
-                            variant="dark" type="submit" />   
+                            variant='dark' type='submit' />   
                     </Container>
                 </Col>
             </Row>        

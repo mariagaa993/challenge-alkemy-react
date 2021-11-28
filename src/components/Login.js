@@ -9,7 +9,7 @@ const Login = () => {
     const history = useHistory()
     return (
         <>
-            <Formik initialValues={{email:'', password: ''}}
+            <Formik initialValues={{email: '', password: ''}}
                 onSubmit={(values) => (
                 getToken(values) 
                 .then(res => res ? history.push('/home') : alert('Invalid email adress or password'))

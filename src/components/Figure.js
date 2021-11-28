@@ -7,7 +7,7 @@ const FigureComponent = ({name, image, children}) => {
             <Figure.Image src={image.url} width={171} height={180} alt={name} />
             <Figure.Caption>
                 <p className='figure-title'>{name}</p>
-                <Container fluid className="figure-button">
+                <Container fluid className='figure-button'>
                     {children}        
                 </Container>
             </Figure.Caption>
