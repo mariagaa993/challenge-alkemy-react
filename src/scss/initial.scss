@@ -1,0 +1,73 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.initial-container {
+    background-color: $darkblue;
+    background-image: url('../utils/wallpaper.jpg');
+    background-size: cover;
+    height: calc(100vh - 70px);
+    max-width: 100% !important; 
+    padding: 0 20px !important;
+    position: $relative; 
+    text-align: $center;
+    @include breakpoint-tablet-desktop {
+        padding: 0 12% !important;
+    }
+    @include  breakpoint-desktop-1 {
+        padding: 0 20px !important
+    }
+    &::before {
+        background-color: rgba(0,0,0,0.7);
+        bottom: 0px;
+        content: "";
+        left: 0px;
+        position: $absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .initial-title {       
+        color: $white;
+        font-size: 35px;
+        font-weight: bold;
+        position: $relative;
+        top: 100px;
+        @include breakpoint-tablet {
+            font-size: 65px;
+            top: 150px;
+        }
+        @include breakpoint-tablet-desktop {
+            top: 200px;
+        }
+    }
+    .initial-p {
+        color: $white;
+        position: $relative;
+        top: 110px;
+        @include breakpoint-tablet {
+            font-size: 25px;
+            top: 140px;
+        }
+        @include breakpoint-tablet-desktop {
+            top: 195px;
+        }
+    }
+    .initial-button {
+        background-color: $yellow !important;
+        border: $yellow !important;
+        color: $black;
+        text-transform: $uppercase;
+        position: $relative !important;
+        top: 120px;
+        width: 100% !important;
+        &:hover {
+            background-color: $purple !important;
+        }
+        @include breakpoint-tablet {
+            width: 30% !important;
+            top: 150px;
+        }
+        @include breakpoint-tablet-desktop {
+            top: 210px;
+        }
+    }
+}

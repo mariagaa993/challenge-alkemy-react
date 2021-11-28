@@ -2,6 +2,7 @@ import { Modal, Container, Row, Col } from 'react-bootstrap';
 import FigureComponent from './Figure';
 import Button from './Button';
 import { useModal } from '../hooks/useModal';
+import '../scss/components/modal.scss';
 
 const ModalHeroes = ({heroes, addHero, detail}) => {
     const [ show, setShow ] = useModal(heroes);

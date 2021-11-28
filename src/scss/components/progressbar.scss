@@ -1,0 +1,16 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.progress-bar {
+    background-color: $yellow !important;
+    color: $black !important;
+}
+
+.progress {
+    margin-bottom: 5px;
+}
+
+.progressBar {
+    bottom: 30%;
+    position: $absolute;
+}

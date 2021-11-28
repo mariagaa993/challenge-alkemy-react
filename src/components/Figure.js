@@ -1,4 +1,5 @@
 import { Container, Figure } from 'react-bootstrap';
+import '../scss/components/figure.scss';
 
 const FigureComponent = ({name, image, children}) => {
     return (

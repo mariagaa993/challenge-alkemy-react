@@ -2,6 +2,7 @@ import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import Footer from '../components/Footer';
+import '../scss/initial.scss';
 
 const Initial = () => {
     return (

@@ -1,0 +1,35 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.container-detail {
+    background-color: $darkblue;
+    border-top: 1px solid rgba(204, 204, 204, 0.137);
+    border-bottom: 1px solid #cccccc23;
+    height: auto;
+    padding: 40px 20px 100px 20px !important;
+    
+}
+.title-detail {
+    color: $white !important;
+}
+
+.detail-img {
+    border-radius: none !important;
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.button-detail {
+    display: flex !important;
+    padding-top: 30px;
+    .b-detail {
+        margin-right: 20px;
+        width: 100% !important;
+        @include breakpoint-desktop-2 {
+            width: 20% !important;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.form {
+    background-color: $white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px 10px 40px;
+    @include breakpoint-tablet {
+        margin: 0 auto;
+        width: 50%;
+    }
+    @include breakpoint-desktop-1 {
+        width: 40%;
+    }
+    @include breakpoint-desktop-2 {
+        width: 30%;
+    }
+    .login-button {
+        background-color: $yellow !important;
+        border: $yellow !important;
+        color: $black;
+        text-transform: $uppercase;
+        width: 100% !important;
+        &:hover {
+            background-color: $purple !important;
+            color: $white;
+        }
+    }
+}

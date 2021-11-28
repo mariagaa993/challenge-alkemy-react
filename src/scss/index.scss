@@ -1,3 +1,4 @@
+@import './variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -6,4 +7,10 @@
 
 body {
 	margin: 0;
+}
+
+.detail-button {
+    background-color: $yellow !important;
+    border: $yellow !important;
+    color: $black !important;
 }

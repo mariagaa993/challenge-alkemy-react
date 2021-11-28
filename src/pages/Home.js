@@ -12,6 +12,7 @@ import { useReduce } from '../hooks/useReduce';
 import { useRemoveAuthenticated } from '../hooks/useAut';
 import {useState} from 'react';
 import Loader from '../components/Loader';
+import '../scss/home.scss';
 
 const Home = () => {
     const [loading, setLoading] = useState(false);

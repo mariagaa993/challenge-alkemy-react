@@ -5,6 +5,7 @@ import Button from '../components/Button';
 import Footer from '../components/Footer';
 import { useAdd } from '../hooks/useAction';
 import { useRemoveAuthenticated } from '../hooks/useAut';
+import '../scss/detail.scss';
 
 const Detail = () => {
     const [addHero] = useAdd();

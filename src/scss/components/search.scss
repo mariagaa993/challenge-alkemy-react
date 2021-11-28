@@ -1,0 +1,21 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.search-button {
+    background-color: $purple !important;
+    border: $purple !important;
+    text-transform: $uppercase;
+}
+
+.input-group {
+    width: 100% !important;
+    @include breakpoint-tablet {
+        width: 70% !important;
+    }
+    @include breakpoint-tablet-desktop {
+        width: 50% !important;
+    }
+    @include breakpoint-desktop-1 {
+        width: 40% !important;
+    }
+}

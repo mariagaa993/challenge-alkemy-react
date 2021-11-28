@@ -10,7 +10,7 @@ export const useInputValue = (handleSearch) => {
     const handleSubmit = e => {
         e.preventDefault();
         if(!input) {
-            alert('No puede estar vacío')
+            alert('It cant be empty!')
             return;
         } 
 
@@ -32,7 +32,7 @@ export const useGetResults = (setLoading) => {
             if(data.results !== undefined) {
                 setResults(data.results)
             } else {
-                alert('No existe!');
+                alert('The character does not exist. Find another!');
                 setLoading(false)
             }
         })

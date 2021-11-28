@@ -3,6 +3,7 @@ import { Formik } from 'formik';
 import Button from './Button';
 import { getToken } from '../services/Login';
 import { useHistory } from 'react-router-dom'
+import '../scss/components/form.scss';
 
 const Login = () => {
     const history = useHistory()

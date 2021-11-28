@@ -1,0 +1,11 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.container-login {
+    background-color: rgba(128, 128, 128, 0.109);
+    height: calc(100vh - 166px);
+    padding: 50px 15px 0 15px !important;
+    @include breakpoint-tablet {
+        padding-top: 80px !important;
+    }
+}

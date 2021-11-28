@@ -1,6 +1,7 @@
 import { Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFrown } from '@fortawesome/free-solid-svg-icons';
+import '../scss/error404.scss';
 
 const Initial = () => {
     return (

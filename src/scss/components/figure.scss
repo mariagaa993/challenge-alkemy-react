@@ -1,0 +1,11 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.figure-caption {
+    color: $black !important;
+    font-size: 17px !important;
+    .figure-button {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

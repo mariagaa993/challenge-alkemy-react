@@ -1,0 +1,20 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.container-error {
+    background-color: rgba(128, 128, 128, 0.109);
+    color: gray;
+    height: 100vh;
+    padding-top: 12%;
+    text-align: center;
+    .error-icon {
+        font-size: 60px;
+    }
+    .error-title {
+        font-size: 50px;
+        padding-top: 10px;
+    }
+    .error-p {
+        font-size: 25px;
+    }
+}

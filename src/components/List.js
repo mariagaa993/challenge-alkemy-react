@@ -1,4 +1,5 @@
 import { ListGroup } from 'react-bootstrap';
+import '../scss/components/list.scss';
 
 const List = ({title, value}) => {
     return (

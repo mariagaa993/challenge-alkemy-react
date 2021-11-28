@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import './scss/app.scss';
 import Routes from './routes/Routes';
 
 const App = () => {

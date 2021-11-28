@@ -1,0 +1,8 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.list-group-item {
+    background-color: $darkblue !important;
+    border: none !important;
+    color: $white !important;
+}   

@@ -1,0 +1,27 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.container-modal {
+    display: flex;
+    justify-content: $center;
+    padding: 10px !important;
+    .figure {
+        object-fit: cover !important;
+        margin-bottom: 50px;
+        text-align: $center;
+        .img-fluid {
+            height: 300px;
+            object-fit: cover !important;
+            width: 100% !important;
+        }
+    }
+}
+
+.modal-content {
+    background-color: rgb(240, 240, 240) !important;
+    height: 500px;
+    text-align: $center;
+    .modal-body {
+        overflow-y: scroll;
+    }
+}

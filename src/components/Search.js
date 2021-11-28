@@ -1,6 +1,7 @@
 import { Form, InputGroup, FormControl } from 'react-bootstrap';
 import Button from './Button';
 import { useInputValue } from '../hooks/useSearch';
+import '../scss/components/search.scss';
 
 const Search = ({handleSearch}) => {
     const [ input, handleChange, handleSubmit ] = useInputValue(handleSearch);

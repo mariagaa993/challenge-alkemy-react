@@ -1,5 +1,6 @@
 import { Container, Card } from 'react-bootstrap';
 import ProgressB from './ProgressB';
+import '../scss/components/card.scss';
 
 const CardHero = ({name, image, children, biography, powerstats}) => {
     return (

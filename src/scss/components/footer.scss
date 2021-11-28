@@ -1,0 +1,15 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.footer {
+    background-color: $darkblue;
+    .footer-p {
+        align-items: $center;
+        display: flex;
+        color: $white;
+        height: 70px;
+        justify-content: $center;
+        margin-bottom: 0 !important;
+        text-align: $center;
+    }
+}

@@ -1,4 +1,5 @@
 import { Container } from 'react-bootstrap';
+import '../scss/components/header.scss';
 
 const Header = ({children}) => {
     
